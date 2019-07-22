@@ -1,0 +1,16 @@
+{
+    "name": "filarichard/mmf_skeleton",
+    "description": "Full implementation of MVC Micro Framework",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Controllers\\":"src/controllers",
+            "Models\\": "src/models",
+            "Config\\": "config"
+        }
+    },
+    "require": {
+        "filarichard/mvc_micro_framework": "^0.1"
+    }
+}

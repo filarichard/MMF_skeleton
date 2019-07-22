@@ -1,0 +1,12 @@
+{
+  "routes": {
+    "/thirdPartiesComponents": {
+      "controller": "Controllers\\ThirdPartiesController",
+      "action": "tpc"
+    }
+  },
+  "modules": [
+    "mvc"
+  ],
+  "diContainer": "config/diContainer.php"
+}

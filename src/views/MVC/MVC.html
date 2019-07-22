@@ -1,0 +1,284 @@
+<!DOCTYPE>
+<html lang="cs">
+    <head>
+        <title>MVC Micro Framework</title>
+        <meta name="author" content="Bc. Richard Fíla">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=latin-ext"
+            rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,700i,800,800i,900,900i&display=swap"
+                  rel="stylesheet">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                  crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css" href="assets/styles.css" media="all">
+            <link rel="shortcut icon" href="#" />
+            </head>            
+            <body>
+                <div class="header row">
+                    <div class="inner-header">
+                        <a href="" class="logo">/mvc_micro_framework</a>
+                        <div class="menu">
+                            <a href="/mvc" class="active">/mvc</a>
+                            <a href="/template">/template</a>
+                            <a href="/eventDispatcher">/event_dispatcher</a>
+                            <a href="/thirdPartiesComponents">/third_parties_components</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-top row" id="home">
+                        <div class="content-top-right">
+                            <h1>MVC</h1>
+                            <h2>Micro Framework</h2>
+                            <p>
+                                Simple, lightweight, PHP MVC micro framework, with more functionalities, e.g. event
+                                dispatcher, logger,
+                                dependency injection container...
+                            </p>
+                        </div>
+                    </div>
+                    <div id="mvc">
+                        <div class="row">
+                            <div class="text col-md-6 offset-md-1">
+                                <h1>MVC</h1>
+                                <h2>Directory</h2>
+                                <p>
+                                    For the proper functioning of the MVC framework, it is necessary to follow the
+                                    following directory structure.<br>
+                                    There are 4 subfolders in the <b>src</b> folder:
+                                    <ul>
+                                        <li>
+                                            controllers - link between database and view, decides what view to display,
+                                            prepares data
+                                        </li>
+                                        <li>
+                                            models - a directory with classes that provide data / possible use of
+                                            Eloquent ORM
+                                        </li>
+                                        <li>
+                                            views - .html, .php, .shtml, ...
+                                        </li>
+                                        <li>
+                                            config - configuration files for every package
+                                        </li>
+                                    </ul>
+                                    You can create aditional folders in controllers and views directory, for using <b>Modules</b>.
+                                </p>
+                            </div>
+                            <div class="directory col-md-3 offset-md-1">
+                                <ul>
+                                    <li>
+                                        <img src="assets/folder-icon.svg">
+                                        app
+                                    </li>
+                                    <li>
+                                        <img src="assets/folder-icon.svg">
+                                        assets
+                                    </li>
+                                    <li>
+                                        <img src="assets/folder-icon.svg">
+                                        config
+                                    </li>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/document-icon-blue.svg"
+                                                 class="assets/document-icon">
+                                            config.json
+                                        </li>
+                                    </ul>
+                                    <li>
+                                        <img src="assets/folder-icon.svg">
+                                        src
+                                    </li>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/folder-icon.svg">
+                                            config
+                                        </li>
+                                        <ul>
+                                            <li>
+                                                <img src="assets/document-icon-blue.svg"
+                                                     class="assets/document-icon">
+                                                mvc.config.json
+                                            </li>
+                                        </ul>
+                                        <li>
+                                            <img src="assets/folder-icon.svg">
+                                            controllers
+                                        </li>
+                                        <ul>
+                                            <li>
+                                                <img src="assets/folder-icon.svg">
+                                                MVC
+                                            </li>
+                                            <ul>
+                                                <li>
+                                                    <span class="class-icon">C</span>
+                                                    MVCController.php
+                                                </li>
+                                            </ul>
+                                        </ul>
+                                        <li>
+                                            <img src="assets/folder-icon.svg">
+                                            models
+                                        </li>
+                                        <ul>
+                                            <li>
+                                                <img src="assets/folder-icon.svg">
+                                                Example
+                                            </li>
+                                            <ul>
+                                                <li>
+                                                    <span class="class-icon">C</span>
+                                                    Segments.php
+                                                </li>
+                                            </ul>
+                                        </ul>
+                                        <li>
+                                            <img src="assets/folder-icon.svg">
+                                            views
+                                        </li>
+                                        <ul>
+                                            <li>
+                                                <img src="assets/folder-icon.svg">
+                                                MVC
+                                            </li>
+                                            <ul>
+                                                <li>
+                                                    <img src="assets/document-icon-green.svg"
+                                                         class="assets/document-icon">
+                                                    EventDispatcher.html
+                                                </li>
+                                                <li>
+                                                    <img src="assets/document-icon-green.svg"
+                                                         class="assets/document-icon">
+                                                    MVC.html
+                                                </li>
+                                                <li>
+                                                    <img src="assets/document-icon-green.svg"
+                                                         class="assets/document-icon">
+                                                    Template.html
+                                                </li>
+                                            </ul>
+                                        </ul>
+                                    </ul>
+                                    <li>
+                                        <img src="assets/folder-icon.svg">
+                                        vendor
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row gray">
+                            <div class="col-md-4 offset-md-1 codebox">
+                                <b>php code:</b>
+                                <code>
+                                    <span class="row-num">&nbsp1</span><span class="red">$router</span> = <span class="blue">new</span> \MVC\Router();
+                                    <span class="row-num">&nbsp2</span>
+                                    <span class="row-num">&nbsp3</span><span class="red">$router</span>->addRoute(<span class="blue">new</span> \MVC\Route(<span class="green">"/"</span>, \Controllers\MVC\MvcController::<span class="purple">class</span>, <span class="green">"mvc"</span>));
+                                    <span class="row-num">&nbsp4</span>
+                                    <span class="row-num">&nbsp5</span><span class="blue">return</span> <span class="red">$router</span>;
+                                </code>
+
+                                <b>JSON:</b>
+                                <code>
+                                    <span class="row-num">&nbsp1</span>"routes": {
+                                    <span class="row-num tab">&nbsp2</span>"/thirdPartiesComponents": {
+                                    <span class="row-num tab2">&nbsp3</span>"controller": <span class="green">"Controllers\\ThirdPartiesController"</span>,
+                                    <span class="row-num tab2">&nbsp4</span>"action": <span class="green">"tpc"</span>
+                                    <span class="row-num tab">&nbsp5</span>}
+                                    <span class="row-num">&nbsp6</span>},
+                                    <span class="row-num">&nbsp7</span>"modules": [
+                                    <span class="row-num tab">&nbsp8</span><span class="green">"mvc"</span>
+                                    <span class="row-num">&nbsp9</span>]
+                                </code>
+                            </div>
+                            <div class="text col-md-4 offset-md-2">
+                                <h2>Router</h2>
+                                <p>
+                                    The router object allows you to easily register all the necessary routes and their
+                                    actions from one place.<br><br>
+                                    You can specify module names in the configuration file. The App class then uploads
+                                    all registered modules and saves their paths.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text col-md-4 offset-md-1">
+                                <h2>Controller</h2>
+                                <p>
+                                    Controller takes care of calling a specific view and preparing data. User defined
+                                    Controller must extend the abstract class Controller. Views and Models files can
+                                    be in model subfolders to, but you must specify a relative address to the view
+                                    folder.
+                                </p>
+                            </div>
+                            <div class="col-md-5 offset-md-2 codebox">
+                                <code>
+                                    <span class="row-num">&nbsp1</span><span class="blue">class</span> MvcController <span class="blue">extends</span> Controller
+                                    <span class="row-num">&nbsp2</span>{
+                                    <span class="row-num tab">&nbsp3</span><span class="blue">public function</span> mvc()
+                                    <span class="row-num tab">&nbsp4</span>{
+                                    <span class="row-num tab2">&nbsp5</span><span class="red">$this</span>-><span class="purple">view</span>->render(<span class="green">"MVC/MVC.html"</span>);
+                                    <span class="row-num tab">&nbsp6</span>}
+                                    <span class="row-num">&nbsp7</span>}
+                                </code>
+                            </div>
+                        </div>
+                        <div class="row gray">
+                            <div class="text col-md-4 offset-md-1">
+                                <h2>Model</h2>
+                                <p>
+                                    To access the database, MVC uses the Micro Framework Eloquent ORM mapping. For more
+                                    information, see the official <a href="https://laravel.com/docs/5.8/eloquent">Eloquent</a> website.
+                                </p>
+                            </div>
+                            <div class="text col-md-4 offset-md-2">
+                                <h2>View</h2>
+                                <p>
+                                    The <b>View</b> part of MVC model implements design pattern Template View.
+                                    For more informations, click <a href="/template">here</a>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row white">
+                            <div class="text col-md-4 offset-md-1">
+                                <h2>App</h2>
+                                <p>
+                                    You can easily use all the elements of the framework at the same time.
+                                    Just create a new project, initialize an instance of the <b>App</b> class,
+                                    and call its <b>run</b> method.
+                                </p>
+                            </div>
+                            <div class="col-md-5 offset-md-2 codebox">
+                                <code>
+                                    <span class="row-num">&nbsp1</span><span class="red">$application</span> = <span class="blue">new</span> \MMFConfig\Bootstrap();
+                                    <span class="row-num">&nbsp2</span><span class="red">$application</span>->run();
+                                </code>
+                            </div>
+                        </div>1
+                    </div>
+                </div>
+                <div class="outer-footer row">
+                    <div class="footer">
+                        <div class="inner-footer">
+                            <a href="" class="logo">/mvc_micro_framework</a>
+                            <div class="menu">
+                                <a href="/mvc">/mvc</a>
+                                <a href="/template">/template</a>
+                                <a href="/eventDispatcher">/event_dispatcher</a>
+                                <a href="/thirdPartiesComponents">/third_parties_components</a>
+                                <a href="https://github.com/filarichard/MMF_skeleton">/GitHub</a>
+                                <a href="https://packagist.org/packages/filarichard/mmf_skeleton">/Packagist</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <span>
+                            Copyright &copy; 2019 Bc. Richard Fíla
+                        </span>
+                    </div>
+                </div>
+                
+            </body>
+        </html>

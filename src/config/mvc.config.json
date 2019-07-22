@@ -1,0 +1,20 @@
+{
+  "routes": {
+    "/": {
+      "controller": "Controllers\\MVC\\MvcController",
+      "action": "mvc"
+    },
+    "/mvc": {
+      "controller": "Controllers\\MVC\\MvcController",
+      "action": "mvc"
+    },
+    "/template": {
+      "controller": "Controllers\\MVC\\MvcController",
+      "action": "template"
+    },
+    "/eventDispatcher": {
+      "controller": "Controllers\\MVC\\MvcController",
+      "action": "dispatcher"
+    }
+  }
+}

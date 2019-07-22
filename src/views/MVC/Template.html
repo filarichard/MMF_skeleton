@@ -1,0 +1,104 @@
+<!DOCTYPE>
+<html lang="cs">
+    <head>
+        <title>MVC Micro Framework</title>
+        <meta name="author" content="Bc. Richard Fíla">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=latin-ext"
+            rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css" href="assets/styles.css" media="all">
+            <link rel="shortcut icon" href="#" />
+            </head>
+            <body>
+                <div class="header row">
+                    <div class="inner-header">
+                        <a href="" class="logo">/mvc_micro_framework</a>
+                        <div class="menu">
+                            <a href="/mvc">/mvc</a>
+                            <a href="/template" class="active">/template</a>
+                            <a href="/eventDispatcher">/event_dispatcher</a>
+                            <a href="/thirdPartiesComponents">/third_parties_components</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-top row">
+                        <div class="content-top-right">
+                            <h1>MVC Micro Framework</h1>
+                            <h2>Template Engine</h2>
+                            <p>
+                                Jednoduchý template engine, který umožňuje front end vývojářům používat datové prvky a logické hodnoty z aplikace v obyčejných souborech.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="text col-md-4 offset-md-1">
+                            <h1>{title1}</h1>
+                            <h2>{subtitle1}</h2>
+                            {content1}
+                            <p>
+                                Funkcionalitu view v našem MVC Micro Frameworku zašťitujě třída Template, která vychází z návrhového vzoru Template View. Při tvorbě view (html stránka, php atd.), se na místa kde budeme chtít zobrazit hodnoty z logické části aplikace vloží jméno proměnné do složených závorek. Příklad: <span class="blue">{example}</span>. V controlleru je potřeba tyto hodnoty správně přiřadit.
+                            </p>
+                        </div>
+                        <div class="col-md-6 offset-md-1 codebox">
+                            <b>php code:</b>
+                            <code>
+                                <span class="row-num">&nbsp1</span><span class="red">$this</span>->setView();
+                                <span class="row-num">&nbsp2</span>
+                                <span class="row-num">&nbsp3</span><span class="red">$this</span>-><span class="purple">view</span>->assignValue(<span class="green">"title1"</span>, <span class="red">$segment</span>->title);
+                                <span class="row-num">&nbsp4</span><span class="red">$this</span>-><span class="purple">view</span>->assignValue(<span class="green">"subtitle1"</span>, <span class="red">$segment</span>->subtitle);
+                                <span class="row-num">&nbsp5</span><span class="red">$this</span>-><span class="purple">view</span>->assignValue(<span class="green">"content1"</span>, <span class="red">$segment</span>->content);
+                                <span class="row-num">&nbsp6</span>
+                                <span class="row-num">&nbsp7</span><span class="red">$this</span>-><span class="purple">view</span>->render(<span class="green">"MVC/MVC.html"</span>);
+                            </code>
+                        </div>
+                    </div>
+                    <div class="row gray">
+                        <div class="codebox col-md-4 offset-md-1">
+                            <b>html code:</b>
+                            <code>
+                                <span class="row-num">&nbsp1</span>&lt<span class="red">body</span>&gt
+                                <span class="row-num tab">&nbsp2</span>&lt<span class="red">div</span> class=<span class="green">"content"</span>&gt
+                                <span class="row-num tab2">3</span>&lt<span class="red">h1</span>&gt<span class="blue">&#123;title1&#125;</span>&lt<span class="red">/h1</span>&gt
+                                <span class="row-num tab2">4</span>&lt<span class="red">h2</span>&gt<span class="blue">&#123;subtitle1&#125;</span>1&lt<span class="red">/h2</span>&gt
+                                <span class="row-num tab2">5</span>&lt<span class="red">p</span>&gt
+                                <span class="row-num tab3">6</span><span class="blue">&#123;content1&#125;</span>
+                                <span class="row-num tab2">7</span>&lt<span class="red">p</span>&gt
+                                <span class="row-num tab">8</span>&lt<span class="red">div</span>&gt
+                                <span class="row-num">9</span>&lt<span class="red">/body</span>&gt
+                            </code>
+                        </div>
+                        <div class="col-md-4 offset-md-1">
+                            <h1>{title2}</h1>
+                            <h2>{subtitle2}</h2>
+                            <p>
+                                {content2}
+                                Každý segment na těchto vzorových stránkách obsahuje paragraph, případně nadpis prvního a druhého řádu. Pro tuto konkrétní stránku je využit šablonovací systém, který nahradí tagy {title1} a {title2} přiřazenýma hodnotama.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-footer row">
+                    <div class="footer">
+                        <div class="inner-footer">
+                            <a href="" class="logo">/mvc_micro_framework</a>
+                            <div class="menu">
+                                <a href="/mvc">/mvc</a>
+                                <a href="/template">/template</a>
+                                <a href="/eventDispatcher">/event_dispatcher</a>
+                                <a href="/thirdPartiesComponents">/third_parties_components</a>
+                                <a href="https://github.com/filarichard/MMF_skeleton">/GitHub</a>
+                                <a href="https://packagist.org/packages/filarichard/mmf_skeleton">/Packagist</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <span>
+                            Copyright &copy; 2019 Bc. Richard Fíla
+                        </span>
+                    </div>
+                </div>
+            </body>
+        </html>

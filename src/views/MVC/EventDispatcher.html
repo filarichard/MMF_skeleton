@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html lang="cs">
+    <head>
+        <title>MVC Micro Framework</title>
+        <meta name="author" content="Bc. Richard Fíla">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=latin-ext"
+            rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css" href="assets/styles.css" media="all">
+            <link rel="shortcut icon" href="#" />
+            </head>
+            <body>
+                <div class="header row">
+                    <div class="inner-header">
+                        <a href="" class="logo">/mvc_micro_framework</a>
+                        <div class="menu">
+                            <a href="/mvc">/mvc</a>
+                            <a href="/template">/template</a>
+                            <a href="/eventDispatcher" class="active">/event_dispatcher</a>
+                            <a href="/thirdPartiesComponents">/third_parties_components</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-top row" >
+                        <div class="content-top-right">
+                            <h1>MVC Micro Framework</h1>
+                            <h2>Event Dispatcher</h2>
+                            <p>
+                                Event Dispatcher je další důležitou součástí v MVC Micro Frameworku. Jedná se o jednoduchou implementaci návrhového vzoru Observer.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="col-md-4 offset-md-1">                               
+                                <h1>Event Dispatcher</h1>
+                                <h2>Event</h2> 
+                                <b>Event Dispatcher</b> je jednoduchou implementací návrhového vzoru <b>Observer</b> a vychází ze standardů <a href="">PSR-3</a>. Pro jeho užití je jednoduché. Stačí vytvořit objekty typu <b>Event</b> a <b>Dispatcher</b>.
+                            </div>
+                            <div class="col-md-6 offset-md-1 codebox">
+                                <code>
+                                    <span class="row-num">&nbsp1</span><span class="red">$this</span>-><span class="purple">eventDispatcher</span> = <span class="blue">new</span> Dispatcher();
+                                    <span class="row-num">&nbsp2</span><span class="red">$this</span>-><span class="mmsg">callDatabase</span> = <span class="blue">new</span> Event(<span class="green">"database"</span>);
+                                    <span class="row-num">&nbsp3</span>
+                                    <span class="row-num">&nbsp4</span><span class="red">$this</span>-><span class="purple">eventDispatcher</span>->attach(<span class="red">$this</span>-><span class="purple">callDatabase</span>, array(<span class="red">$this</span>, <span class="green">'getDatabaseInstance'</span>));
+                                </code>
+                            </div>
+                        </div>
+                        <div class="row gray">
+                            <div class="col-md-5 offset-md-1 codebox">
+                                <code>
+                                    <span class="row-num">&nbsp1</span><span class="blue">public function</span> template()
+                                    <span class="row-num">&nbsp2</span>{
+                                    <span class="row-num tab">&nbsp3</span><span class="red">$this</span>-><span class="purple">eventDispatcher</span>->dispatch(<span class="red">$this</span>-><span class="purple">callDatabase</span>);
+                                    <span class="row-num">&nbsp4</span>}
+                                </code>
+                            </div>
+                            <div class="col-md-4 offset-md-1">
+                                <h2>Dispatch</h2>
+                                U <b>Dispatcheru</b> se poté zaregistruje <b>Listener</b>, což je jakákoliv spustitelná část kódu. Dále stačí kdekoliv v kódu zavolat metodu objektu Dispatcher, <b>Dispatch</b>, která všechny zainteresované listenery informuje o skutečnosti, která nastala. Dále je možné jakoukékoliv události zastavit propagaci. Tedy pakliže nastane daná událost, posluchačům se nedá vědět.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-footer row">
+                    <div class="footer">
+                        <div class="inner-footer">
+                            <a href="" class="logo">/mvc_micro_framework</a>
+                            <div class="menu">
+                                <a href="/mvc">/mvc</a>
+                                <a href="/template">/template</a>
+                                <a href="/eventDispatcher">/event_dispatcher</a>
+                                <a href="/thirdPartiesComponents">/third_parties_components</a>
+                                <a href="https://github.com/filarichard/MMF_skeleton">/GitHub</a>
+                                <a href="https://packagist.org/packages/filarichard/mmf_skeleton">/Packagist</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <span>
+                            Copyright &copy; 2019 Bc. Richard Fíla
+                        </span>
+                    </div>
+                </div>
+                
+            </body>
+        </html>
