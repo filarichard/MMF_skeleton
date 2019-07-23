@@ -11,8 +11,7 @@
                 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
                   crossorigin="anonymous">
             <link rel="stylesheet" type="text/css" href="assets/styles.css" media="all">
-            <link rel="shortcut icon" href="#" />
-            </head>            
+            </head>
             <body>
                 <div class="header row">
                     <div class="inner-header">
@@ -20,8 +19,8 @@
                         <div class="menu">
                             <a href="/mvc" class="active">/mvc</a>
                             <a href="/template">/template</a>
-                            <a href="/eventDispatcher">/event_dispatcher</a>
-                            <a href="/thirdPartiesComponents">/third_parties_components</a>
+                            <a href="/event_dispatcher">/event_dispatcher</a>
+                            <a href="/third_parties_components">/third_parties_components</a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +42,7 @@
                                 <h1>MVC</h1>
                                 <h2>Directory</h2>
                                 <p>
-                                    For the proper functioning of the MVC framework, it is necessary to follow the
+                                    For proper functioning of the MVC framework, it is necessary to follow the
                                     following directory structure.<br>
                                     There are 4 subfolders in the <b>src</b> folder:
                                     <ul>
@@ -67,10 +66,6 @@
                             </div>
                             <div class="directory col-md-3 offset-md-1">
                                 <ul>
-                                    <li>
-                                        <img src="assets/folder-icon.svg">
-                                        app
-                                    </li>
                                     <li>
                                         <img src="assets/folder-icon.svg">
                                         assets
@@ -114,7 +109,7 @@
                                             <ul>
                                                 <li>
                                                     <span class="class-icon">C</span>
-                                                    MVCController.php
+                                                    MvcController.php
                                                 </li>
                                             </ul>
                                         </ul>
@@ -124,15 +119,9 @@
                                         </li>
                                         <ul>
                                             <li>
-                                                <img src="assets/folder-icon.svg">
-                                                Example
+                                                <span class="class-icon">C</span>
+                                                Segments.php
                                             </li>
-                                            <ul>
-                                                <li>
-                                                    <span class="class-icon">C</span>
-                                                    Segments.php
-                                                </li>
-                                            </ul>
                                         </ul>
                                         <li>
                                             <img src="assets/folder-icon.svg">
@@ -146,17 +135,17 @@
                                             <ul>
                                                 <li>
                                                     <img src="assets/document-icon-green.svg"
-                                                         class="assets/document-icon">
+                                                         class="document-icon">
                                                     EventDispatcher.html
                                                 </li>
                                                 <li>
                                                     <img src="assets/document-icon-green.svg"
-                                                         class="assets/document-icon">
+                                                         class="document-icon">
                                                     MVC.html
                                                 </li>
                                                 <li>
                                                     <img src="assets/document-icon-green.svg"
-                                                         class="assets/document-icon">
+                                                         class="document-icon">
                                                     Template.html
                                                 </li>
                                             </ul>
@@ -183,7 +172,7 @@
                                 <b>JSON:</b>
                                 <code>
                                     <span class="row-num">&nbsp1</span>"routes": {
-                                    <span class="row-num tab">&nbsp2</span>"/thirdPartiesComponents": {
+                                    <span class="row-num tab">&nbsp2</span>"/third_parties_components": {
                                     <span class="row-num tab2">&nbsp3</span>"controller": <span class="green">"Controllers\\ThirdPartiesController"</span>,
                                     <span class="row-num tab2">&nbsp4</span>"action": <span class="green">"tpc"</span>
                                     <span class="row-num tab">&nbsp5</span>}
@@ -196,7 +185,7 @@
                             <div class="text col-md-4 offset-md-2">
                                 <h2>Router</h2>
                                 <p>
-                                    The router object allows you to easily register all the necessary routes and their
+                                    The Router object allows you to easily register all the necessary routes and their
                                     actions from one place.<br><br>
                                     You can specify module names in the configuration file. The App class then uploads
                                     all registered modules and saves their paths.
@@ -207,9 +196,9 @@
                             <div class="text col-md-4 offset-md-1">
                                 <h2>Controller</h2>
                                 <p>
-                                    Controller takes care of calling a specific view and preparing data. User defined
+                                    The Controller takes care of calling a specific view and preparing data. User defined
                                     Controller must extend the abstract class Controller. Views and Models files can
-                                    be in model subfolders to, but you must specify a relative address to the view
+                                    be in model subfolders too, but you must specify a relative address to the view
                                     folder.
                                 </p>
                             </div>
@@ -256,7 +245,7 @@
                                     <span class="row-num">&nbsp2</span><span class="red">$application</span>->run();
                                 </code>
                             </div>
-                        </div>1
+                        </div>
                     </div>
                 </div>
                 <div class="outer-footer row">
@@ -266,8 +255,8 @@
                             <div class="menu">
                                 <a href="/mvc">/mvc</a>
                                 <a href="/template">/template</a>
-                                <a href="/eventDispatcher">/event_dispatcher</a>
-                                <a href="/thirdPartiesComponents">/third_parties_components</a>
+                                <a href="/event_dispatcher">/event_dispatcher</a>
+                                <a href="/third_parties_components">/third_parties_components</a>
                                 <a href="https://github.com/filarichard/MMF_skeleton">/GitHub</a>
                                 <a href="https://packagist.org/packages/filarichard/mmf_skeleton">/Packagist</a>
                             </div>

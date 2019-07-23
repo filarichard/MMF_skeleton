@@ -1,0 +1,221 @@
+html {
+scroll-behavior: smooth;
+font-family: 'PT Sans', sans-serif;
+}
+body {
+    width: 100%;
+    margin: 0;
+}
+h1 {
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+}
+h2 {
+font-family: 'Montserrat', sans-serif;
+font-weight: bolder;
+}
+a {
+color: #0096d7;
+text-decoration: none;
+}
+a:hover {
+color: rgba(0, 0, 0, 0.67)!important;
+text-decoration: none;
+}
+.content {
+color: #000;
+}
+.header {
+position: fixed;
+z-index: 2;
+width: 100%;
+height: 50px;
+background: rgba(0, 0, 0, 0.67);
+font-size: .8rem;
+display: flex;
+align-items: center;
+padding: 0 100px;
+}
+.outer-footer {
+width: 100%;
+height: 100px;
+background: rgba(0, 0, 0, 1);
+font-size: 1.2rem;
+}
+.footer {
+height: 50px;
+font-size: .8rem;
+display: flex;
+align-items: center;
+width: calc(100% - 100px);
+text-align: center;
+}
+.inner-header, .inner-footer {
+width: 100%;
+}
+.header a, .footer a {
+color: #fff;
+margin-left: 15px;
+text-decoration: none;
+}
+.footer a:hover {
+color: rgba(255, 255, 255, 0.67)!important;
+text-decoration: none;
+}
+.logo {
+float: left;
+margin-left: 0px !important;
+font-size: 1rem;
+font-weight: bold;
+}
+.footer .logo {
+float: none;
+}
+.inner-footer {
+margin-left: 100px !important;
+}
+.menu {
+float: right;
+}
+.footer .menu {
+float: none;
+display: inline;
+}
+.footer .logo {
+margin-right: 20px;
+display: inline;
+float: none;
+}
+.copyright {
+font-size: .8rem;
+width: 100%;
+display: block;
+text-align: center;
+color: #fff;
+margin-top: -10px;
+opacity: .5;
+}
+.content-top {
+width: 100%;
+height: 500px;
+background-image: linear-gradient(45deg, rgba(0, 164, 83, .75), rgba(0, 115, 185, .75)), url("MVC-Code.jpg");
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.active {
+color: #8ec549 !important;
+font-weight: bold;
+}
+.header a:hover {
+color: #e6e6e6 !important;
+}
+.content-top {
+display: flex;
+align-items: center;
+}
+.content-top div {
+float: right;
+}
+.content-top-right {
+color: #fff;
+margin-left: 60%;
+width: 30%;
+}
+.content h1 {
+font-size: 3.5rem;
+margin-bottom: 10px;
+}
+.content h2 {
+margin-top: 0;
+font-size: 2.2rem;
+color: #0096d7 !important;
+}
+.content-top h1 {
+font-size: 3.5rem;
+margin-bottom: 10px;
+}
+.content-top h2, .gray h2 {
+margin-top: 0;
+font-size: 2.2rem;
+color: #8ec549 !important;
+}
+.codebox {
+height: auto;
+max-height: 500px;
+color: #000;
+white-space: pre-line;
+padding: 10px 20px;
+font-size: 0.9em;
+display: inline-block;
+}
+.row-num {
+text-align: right;
+margin-right: 15px;
+color: gray;
+}
+.row {
+margin: 0!important;
+}
+.content .row {
+padding-top: 50px;
+padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+.gray {
+background: #f3f3f3;
+}
+.tab {
+margin-right: 40px;
+}
+.tab2 {
+margin-right: 70px;
+}
+.tab3 {
+margin-right: 100px;
+}
+.tab4 {
+margin-right: 130px;
+}
+.tab5 {
+margin-right: 160px;
+}
+.tab6 {
+margin-right: 190px;
+}
+.red {
+color: #b03866;
+}
+.blue {
+color: #0096d7;
+}
+.green {
+color: #8ec549;
+}
+.purple {
+color: #980c79;
+}
+code {
+color: #000 !important;
+}
+.directory ul {
+list-style-type: none;
+padding-left: 0;
+}
+.directory ul ul {
+padding-left: 20px;
+}
+.directory img {
+width: 15px;
+margin-top: -2px;
+}
+.directory .document-icon {
+width: 13px;
+margin-top: -3px!important;
+}
+.directory .class-icon {
+color: #0096d7;
+font-weight: bold;
+}
