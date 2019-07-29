@@ -1,7 +1,7 @@
 # MMF_skeleton
 ### Full implementation of MVC Micro Framework
 
-MMF_skeleton is project, that shows, how to implement mvc_micro_framework.
+MMF_skeleton is project, that shows how to implement mvc_micro_framework.
 
 mvc_micro_framework is simple and lightweight PHP micro framework, that allows you easy and fast build of MVC applications. It's simple and extensible!
 
@@ -12,7 +12,7 @@ mvc_micro_framework requires `PHP 7.1` or grater.
 1. Download
 
 **With Composer:**  
-`composer create-project filarichard/mmf_skeleton`
+`composer require filarichard/mvc_micro_framework`
 
 **Without Composer:**  
 Download files and extract them directly to web directory.
@@ -39,8 +39,8 @@ $application->run();
 }
 ```
 Possible config values are:  
-* routes - list of all routes used in app, that doesn't use modules.
-* modules - list of all modules used in app.
+* routes - list of all routes used in the app, that doesn't use modules.
+* modules - list of all modules used in the app.
 * router - path to PHP fith configured router.
 * diContainer - path to PHP fith configured DI Container.
 * request - path to PHP fith configured HTTP Request.
@@ -62,7 +62,7 @@ For fully working routing, use followed directory:
 For Router setup, you can use on of the following choices:
 1. Define routes in **config** file
 
-All routes, that isn't included in modules, create in **config.json** file.  
+All routes, that aren't included in modules, create in **config.json** file.  
 All routes, that are in modules, create in **modulname.config.json** files.
 
 Structure of route definition:
@@ -84,7 +84,7 @@ return $router;
 ```
 
 ## Template Engine
-mvc_micro_framework have built in Template Engine. Just follow these few steps:
+mvc_micro_framework have built-in Template Engine. Just follow these few steps:
 1. Set template
 
 ```php
@@ -113,7 +113,7 @@ $this->view->assignValue("content1", $contentValue);
 ```php
 $this->view->render("pathToFile.html");
 ```
-Function **render** can take second parameter, that define, if path is full or relative to `/src/views`.
+Function **render** can take second parameter that define if path is full or relative to `/src/views`.
 
 ## Event Dispatcher
 With following steps, you can use our Event Dispatcher:
