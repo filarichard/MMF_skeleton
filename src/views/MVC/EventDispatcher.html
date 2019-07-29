@@ -37,8 +37,8 @@
                         <div class="row">
                             <div class="col-md-4 offset-md-1">                               
                                 <h1>Event Dispatcher</h1>
-                                <h2>Event</h2> 
-                                <b>Event Dispatcher</b> je jednoduchou implementací návrhového vzoru <b>Observer</b> a vychází ze standardů <a href="">PSR-3</a>. Pro jeho užití je jednoduché. Stačí vytvořit objekty typu <b>Event</b> a <b>Dispatcher</b>.
+                                <h2>Event</h2>
+                                <b>Event Dispatcher</b> is a simple implementation of the <b>Observer</b> design pattern and is based on <a href="https://www.php-fig.org/psr/psr-14/">PSR-14</a> standards. It's easy to use. Just create <b>Event</b> and <b>Dispatcher</b> objects.
                             </div>
                             <div class="col-md-6 offset-md-1 codebox">
                                 <code>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="col-md-4 offset-md-1">
                                 <h2>Dispatch</h2>
-                                U <b>Dispatcheru</b> se poté zaregistruje <b>Listener</b>, což je jakákoliv spustitelná část kódu. Dále stačí kdekoliv v kódu zavolat metodu objektu Dispatcher, <b>Dispatch</b>, která všechny zainteresované listenery informuje o skutečnosti, která nastala. Dále je možné jakoukékoliv události zastavit propagaci. Tedy pakliže nastane daná událost, posluchačům se nedá vědět.
+                                The <b>Dispatcher</b> then registers the <b>Listener</b>, which is any executable part of the code. In addition, it is sufficient to call the Dispatcher object method <b>Dispatch</b> anywhere in the code, which informs all interested listeners . It is also possible to stop the promotion of any event. So if a given event occurs listeners will not be alerted.
                             </div>
                         </div>
                     </div>

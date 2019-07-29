@@ -4,7 +4,7 @@
 namespace Controllers\MVC;
 
 // import use
-use Config\database;
+use Config\Database;
 use EventDispatcher\EventDispatcherInterface;
 use EventDispatcher\StoppableEventInterface;
 use MVC\Controller;
@@ -64,9 +64,9 @@ class MvcController extends Controller
     }
 
     // metoda pro ziskani pripojeni k databazi
-    public function getDatabaseInstance()
+    public function initializeDB()
     {
-        database::getInstance();
+        Database::initialize();
     }
 
 

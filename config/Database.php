@@ -7,7 +7,7 @@ namespace Config;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 // nastaveni databaze pomoci Caupsule Manager z frameworku Laravel
-class database
+class Database
 {
     private static $instance;
 
@@ -27,11 +27,10 @@ class database
     }
 
     // zajisteni NV Singleton
-    public static function getInstance()
+    public static function initialize()
     {
         if (self::$instance === null) {
             self::$instance = new self;
         }
-        return self::$instance;
     }
 }
