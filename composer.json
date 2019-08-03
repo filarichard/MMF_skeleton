@@ -11,6 +11,6 @@
         }
     },
     "require": {
-        "filarichard/mvc_micro_framework": "^0.3"
+        "filarichard/mvc_micro_framework": "^0.4"
     }
 }
