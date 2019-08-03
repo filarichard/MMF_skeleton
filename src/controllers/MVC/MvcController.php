@@ -26,7 +26,7 @@ class MvcController extends Controller
 
         $this->eventDispatcher = $eventDispatcher;
         $this->callDatabase = $event;
-        $this->eventDispatcher->attach($this->callDatabase, array($this, 'getDatabaseInstance'));
+        $this->eventDispatcher->attach($this->callDatabase, array($this, 'initializeDB'));
     }
 
     // nasledujici funkce jsou volany jako akce routy
