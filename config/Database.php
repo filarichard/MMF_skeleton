@@ -27,7 +27,7 @@ class Database
     }
 
     // zajisteni NV Singleton
-    public static function initialize()
+    public static function GetInstance()
     {
         if (self::$instance === null) {
             self::$instance = new self;

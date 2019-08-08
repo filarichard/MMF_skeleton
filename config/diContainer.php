@@ -23,7 +23,9 @@ $container["request"] = function() {
 $container["logger"] = function () {
     $logger = new Logger("mainLogger");
     $logger->pushHandler(new BrowserConsoleHandler());
-    $logger->pushHandler(new StreamHandler('log.txt',Logger::CRITICAL));
+    if (file_exists("log.txt")) {
+        $logger->pushHandler(new StreamHandler('log.txt',Logger::CRITICAL));
+    }
 
     return $logger;
 };
